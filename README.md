@@ -1,10 +1,50 @@
-# FarmTech Solutions – Modelagem de Banco de Dados
+# Projeto FarmTech Solutions 🌾
 
-## 🧬 Modelo Entidade-Relacionamento (MER)
+## 🌱 Objetivo
+Desenvolver um modelo relacional de banco de dados para armazenar e analisar dados coletados por sensores agrícolas (umidade, pH e nutrientes).
 
-### 📌 Objetivo
-Armazenar e analisar dados de sensores agrícolas, auxiliando no monitoramento de plantações e na tomada de decisão de irrigação e aplicação de nutrientes.
+## 🧠 Entidades e Atributos (MER)
 
+### 🌾 Cultura
+- id_cultura (PK)
+- nome_cultura
+
+### 📍 Localização
+- id_local (PK)
+- descricao_local
+
+### 🌡️ Sensor
+- id_sensor (PK)
+- tipo_sensor (umidade, pH, NPK)
+
+### 📈 Leitura
+- id_leitura (PK)
+- id_sensor (FK)
+- id_local (FK)
+- data_hora
+- valor
+
+### 💧 Ajuste
+- id_ajuste (PK)
+- id_local (FK)
+- tipo_ajuste (água, vitamina)
+- quantidade
+- data_hora
+
+## 🔗 Relacionamentos
+- Uma cultura pode estar em vários locais (1:N)
+- Um local pode ter várias leituras e ajustes (1:N)
+- Um sensor pode gerar várias leituras (1:N)
+
+## 📂 Arquivos
+- `script.sql`: script SQL com a estrutura do banco
+- `modelo.dmd`: projeto do SQL Developer Data Modeler
+- `modelo.png`: imagem do DER
+
+## 👤 Integrante Responsável
+Murilo de Faria Benhossi  
+RM562358 
+Fase 2
 ---
 
 ### 🟢 Entidades e Atributos
